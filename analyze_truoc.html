@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next.js Bundle Analyze Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            color: #222;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        h1 {
+            color: #0070f3;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background: #fff;
+            margin-bottom: 2rem;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background: #f0f0f0;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .route {
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Next.js Bundle Analyze Report</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Route</th>
+                <th>Size</th>
+                <th>First Load JS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="route">/</td>
+                <td>10.7 kB</td>
+                <td>158 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/_not-found</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/aboutus</td>
+                <td>3.44 kB</td>
+                <td>121 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/admin</td>
+                <td>5.9 kB</td>
+                <td>125 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/admin/banners</td>
+                <td>7.79 kB</td>
+                <td>152 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/admin/banners/create</td>
+                <td>163 B</td>
+                <td>194 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/admin/banners/edit/[id]</td>
+                <td>163 B</td>
+                <td>194 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/admin/blog</td>
+                <td>5.91 kB</td>
+                <td>139 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/admin/blog/create</td>
+                <td>1.3 kB</td>
+                <td>165 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/admin/blog/edit/[slug]</td>
+                <td>1.81 kB</td>
+                <td>165 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/admin/categories</td>
+                <td>10.8 kB</td>
+                <td>192 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/admin/orders</td>
+                <td>10.6 kB</td>
+                <td>163 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/admin/orders/[orderId]</td>
+                <td>9.01 kB</td>
+                <td>139 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/admin/products</td>
+                <td>4.68 kB</td>
+                <td>141 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/admin/products/[id]</td>
+                <td>2.72 kB</td>
+                <td>139 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/admin/products/[id]/edit</td>
+                <td>1.91 kB</td>
+                <td>168 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/admin/products/create</td>
+                <td>2.07 kB</td>
+                <td>168 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/admin/users</td>
+                <td>10.9 kB</td>
+                <td>136 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/api/admin/blog</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/api/admin/products</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/api/admin/products/[id]</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/api/auth/[...nextauth]</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/api/blog</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/api/blog/[slug]</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/api/blog/bulk</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/api/blog/generate-slug</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/api/blog/upload-image</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/api/blogs</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/api/blogs/[id]</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/api/blogs/stats</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/api/categories</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/api/categories/[id]</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/api/comment</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/api/product-stats</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/api/products</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/api/products/[id]</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/api/products/slug/[slug]</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/api/rating</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/api/upload</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/api/users</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/api/users/[id]</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/api/users/stats</td>
+                <td>197 B</td>
+                <td>100 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/banned</td>
+                <td>26.9 kB</td>
+                <td>207 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/cart</td>
+                <td>10.4 kB</td>
+                <td>169 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/checkout</td>
+                <td>7.65 kB</td>
+                <td>172 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/contact</td>
+                <td>6.36 kB</td>
+                <td>142 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/login</td>
+                <td>4.59 kB</td>
+                <td>126 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/mandala-pay</td>
+                <td>13.5 kB</td>
+                <td>135 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/map</td>
+                <td>3.58 kB</td>
+                <td>107 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/news</td>
+                <td>6.13 kB</td>
+                <td>124 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/news/[slug]</td>
+                <td>5.75 kB</td>
+                <td>147 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/products</td>
+                <td>22 kB</td>
+                <td>143 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/products/[slug]</td>
+                <td>10.3 kB</td>
+                <td>138 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/profile</td>
+                <td>31.6 kB</td>
+                <td>200 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/profile/addresses</td>
+                <td>5.81 kB</td>
+                <td>129 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/profile/addresses/create</td>
+                <td>180 B</td>
+                <td>146 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/profile/addresses/edit/[addressId]</td>
+                <td>180 B</td>
+                <td>146 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/profile/orders</td>
+                <td>5.2 kB</td>
+                <td>123 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/profile/orders/[orderId]</td>
+                <td>7.18 kB</td>
+                <td>170 kB</td>
+            </tr>
+            <tr>
+                <td class="route">/register</td>
+                <td>5.45 kB</td>
+                <td>150 kB</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>First Load JS shared by all</h2>
+    <ul>
+        <li>100 kB</li>
+        <li>chunks/4bd1b696-cc729d47eba2cee4.js: 54.1 kB</li>
+        <li>chunks/5964-4f12b6422f73cb12.js: 43.9 kB</li>
+        <li>other shared chunks (total): 2.03 kB</li>
+    </ul>
+    <h2>Middleware</h2>
+    <ul>
+        <li>44.2 kB</li>
+    </ul>
+</body>
+
+</html>

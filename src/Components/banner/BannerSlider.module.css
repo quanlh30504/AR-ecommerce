@@ -1,0 +1,23 @@
+.banner-slider {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background: #f3f4f6;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+/* Responsive for sale banner */
+.banner-slider.sale {
+    max-width: 1380px;
+    aspect-ratio: 1380/320;
+    min-height: 320px;
+}
+
+/* Responsive for advertisement banner */
+.banner-slider.advertisement {
+    max-width: 320px;
+    aspect-ratio: 320/280;
+    min-height: 280px;
+}
