@@ -6,7 +6,7 @@ import { useFavorite } from "@/hooks/useFavorite";
 import { Card } from "@/Components/ui/card";
 import { Button } from "@/Components/ui/button";
 import { Badge } from "@/Components/ui/badge";
-import { Star, Share2, ShoppingCart, Minus, Plus } from "lucide-react";
+import { Star, Share2, ShoppingCart, Minus, Plus, RectangleGoggles } from "lucide-react";
 import { addItemToCart, buyNowAndRedirect } from "@/lib/actions/cart";
 import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
@@ -73,8 +73,8 @@ const ProductInfo: React.FC<ProductInfoProps> = ({
       <Star
         key={i}
         className={`w-4 h-4 ${i < Math.floor(rating)
-            ? "fill-yellow-400 text-yellow-400"
-            : "text-gray-300"
+          ? "fill-yellow-400 text-yellow-400"
+          : "text-gray-300"
           }`}
       />
     ));
@@ -124,6 +124,15 @@ const ProductInfo: React.FC<ProductInfoProps> = ({
       setQuantity(quantity - 1);
     }
   };
+
+  const handleARClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (productId) {
+      router.push(`/products/ar/${productId}`);
+    } else {
+      toast.error("Sản phẩm không hỗ trợ trải nghiệm AR.");
+    }
+  }
 
   return (
     <div className="space-y-6">
@@ -282,6 +291,16 @@ const ProductInfo: React.FC<ProductInfoProps> = ({
             Thêm vào giỏ
           </Button>
           <FavoriteButton isFavorite={isFavorite} onClick={handleFavoriteClick} title={isFavorite ? 'Bỏ khỏi yêu thích' : 'Thêm vào yêu thích'} />
+          <Button
+            size="icon"
+            variant="outline"
+            onClick={(e) => { e.stopPropagation(); handleARClick(e); }}
+            title="Trải nghiệm AR"
+            className="w-10 h-9 flex items-center justify-center rounded-md"
+          >
+            <RectangleGoggles className="w-4 h-4" />
+          </Button>
+
           <Button variant="outline" size="icon">
             <Share2 className="w-4 h-4" />
           </Button>

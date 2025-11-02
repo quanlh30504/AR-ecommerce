@@ -2,7 +2,7 @@
 import React, { useCallback, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { Product } from "@/types/product";
-import { ShoppingCart, Scale } from "lucide-react";
+import { ShoppingCart, Scale, RectangleGoggles } from "lucide-react";
 import FavoriteButton from "@/Components/products/FavoriteButton";
 import { useFavorite } from "@/hooks/useFavorite";
 import toast from "react-hot-toast";
@@ -73,6 +73,16 @@ const ProductListItem: React.FC<ProductListItemProps> = ({
       }
     })();
   }, [onToggleFavorite, product, favoriteIds, setFavoriteIds, refreshFavorites]);
+
+  const handleARClick = (e: React.MouseEvent) => {
+      e.stopPropagation();
+      if (product._id) {
+        router.push(`/products/ar/${product._id}`);
+      } else {
+        toast.error("Sản phẩm không hỗ trợ trải nghiệm AR.");
+      }
+  }
+
 
   return (
     <div
@@ -176,6 +186,17 @@ const ProductListItem: React.FC<ProductListItemProps> = ({
               <ShoppingCart className="w-3 h-3 mr-1" />
               MUA HÀNG
             </Button>
+
+            {/* AR button */}
+          <Button
+            size="icon"
+            variant="outline"
+            onClick={(e) => { e.stopPropagation(); handleARClick(e); }}
+            title="Trải nghiệm AR"
+            className="w-10 h-9 flex items-center justify-center rounded-md"
+          >
+            <RectangleGoggles className="w-4 h-4" />
+          </Button>
 
             <FavoriteButton
               isFavorite={favoriteIds.includes(String(product._id))}
