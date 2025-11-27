@@ -1,6 +1,23 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Slider thumb đẹp bằng Tailwind + ring */
+input[type="range"]::-webkit-slider-thumb {
+  @apply h-5 w-5 rounded-full bg-indigo-500 border-0 cursor-pointer shadow-lg ring-4 ring-indigo-500/30 transition-all hover:ring-indigo-500/50 hover:scale-110;
+}
+
+input[type="range"]::-moz-range-thumb {
+  @apply h-5 w-5 rounded-full bg-indigo-500 border-0 cursor-pointer shadow-lg ring-4 ring-indigo-500/30;
+}
+
 /* Custom utilities */
 .line-clamp-1 {
   display: -webkit-box;
