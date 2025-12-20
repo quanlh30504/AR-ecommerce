@@ -18,6 +18,11 @@ export function ConditionalLayout({
   const pathname = usePathname();
 
   const isAdminRoute = pathname?.startsWith("/admin");
+  const isArRoute = pathname?.startsWith("/products/ar");
+
+  if (isArRoute) {
+    return <div className="min-h-screen w-screen bg-black">{children}</div>;
+  }
 
   if (isAdminRoute) {
     return <main className="min-h-screen bg-gray-50">{children}</main>;

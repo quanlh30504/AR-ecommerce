@@ -45,6 +45,9 @@ export const HEADER_ROUTES = {
     WISHLIST: "/account/wishlist",
     CART: "/cart",
   },
+  TRY_ON: {
+    VIRTUAL: "/products/ar/try_on",
+  }
 } as const;
 
 export const navigationItems = [
@@ -78,4 +81,9 @@ export const navigationItems = [
     text: "LIÊN HỆ",
     hasDropdown: false,
   },
+  {
+    href: HEADER_ROUTES.TRY_ON.VIRTUAL,
+    text: "PHÒNG THỬ ẢO",
+    hasDropdown: false,
+  }
 ];

@@ -43,3 +43,6 @@ next-env.d.ts
 yarn.lock
 
 src\scripts\migrateNormalizeProducts.ts
+
+public/test-ar/
+src/app/(ar-test)/
